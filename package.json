@@ -1,0 +1,30 @@
+{
+  "name": "svgpdf",
+  "version": "1.0.0",
+  "description": "A simple CLI to make PDF files from SVGs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mateusnroll/svgpdf.git"
+  },
+  "keywords": [
+    "svg",
+    "pdf",
+    "svg2pdf"
+  ],
+  "author": "mateusnroll",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mateusnroll/svgpdf/issues"
+  },
+  "homepage": "https://github.com/mateusnroll/svgpdf#readme",
+  "dependencies": {
+    "commander": "^2.19.0",
+    "svg-to-pdfkit": "^0.1.7",
+    "svg.js": "^2.6.6",
+    "svgson": "^2.1.1"
+  }
+}
