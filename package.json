@@ -1,6 +1,6 @@
 {
   "name": "svgpdf",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple CLI to make PDF files from SVGs",
   "main": "index.js",
   "bin": {
