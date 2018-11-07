@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 
 const program     = require('commander')
 const path        = require('path')
@@ -26,9 +27,11 @@ function work(folderPath) {
 	if(svgs.length < 1) {
 		console.log('No SVGs found in %s\nTerminating', folderPath)
 		process.exit()
+	} else {
+		console.log(`${svgs.length} SVG files found, PDFing to the same folder...`)
+		svgs.forEach(f => makePdf(f, folderPath))
+		console.log('Done!')
 	}
-
-	svgs.forEach(f => makePdf(f, folderPath))
 }
 
 function makePdf(file, folderPath) {
