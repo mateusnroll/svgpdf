@@ -37,10 +37,17 @@ function makePdf(file, folderPath) {
 	const fileContent = fs.readFileSync(originPath, 'utf-8')
 	const svgData = svgConfig(fileContent)
 
-	//let doc = new PDFDocument({ compress: false, size: [svgData.width, svgData.height] })
-	let doc = new PDFDocument({ compress: false, size: [svgData.width, svgData.height], margin: 0 })
+	let doc = new PDFDocument({
+		compress: false, 
+		size: [svgData.width, svgData.height],
+		margins: { top: 0, right: 0, bottom: 0, left: 0 }
+	})
 	doc.pipe(fs.createWriteStream(destPath))
-	SVGtoPDF(doc, fileContent, 0, 0, {})
+	SVGtoPDF(doc, fileContent, 0, 0, {
+		width: svgData.width,
+		height: svgData.height,
+		assumePt: true
+	})
 	doc.end()
 }
 
